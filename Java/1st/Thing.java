@@ -5,7 +5,7 @@
  * @aleexolsson
  * @publicAlpha1
  */
-public class thing
+public class Thing
 {
     // instance variables - replace the example below with your own
     private int x;
@@ -13,7 +13,7 @@ public class thing
     /**
      * Constructor for objects of class thing
      */
-    public thing()
+    public Thing()
     {
         // initialise instance variables
         x = 0;
