@@ -62,20 +62,52 @@ public class TicketMachine
      */
     public void printTicket()
     {
+        if (balance >= price)
+        {
+            // Simulate the printing of a ticket.
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# $" + price + ".");
+            System.out.println("##################");
+            System.out.println();
+    
+            // Update the total collected with the balance.
+            total = total + price;
+            // Clear the balance.
+            balance = balance - price;    
+        }
+        else if (balance < price)
+        {
+            noPrintTicket();
+        }
+        
+    }
+    
+    /**
+     * Don't print a ticket.
+     * Tell the user that they 
+     * don't have enough money.
+     */
+    public void noPrintTicket()
+    {
         // Simulate the printing of a ticket.
+        System.out.println("");
+        System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("##################");
         System.out.println("# The BlueJ Line");
-        System.out.println("# Ticket");
-        System.out.println("# " + price + " cents.");
+        System.out.println("# No Ticket");
+        System.out.println("# You don't have enough money");
         System.out.println("##################");
         System.out.println();
 
-        // Update the total collected with the balance.
-        total = total + balance;
-        // Clear the balance.
-        balance = 0;
     }
 }

@@ -56,6 +56,15 @@ public class Clock
     }
     
     /**
+     * 
+     */
+    private void reset()
+    {
+        clock.timeReset();
+        label.setText(clock.getTime());
+    }
+    
+    /**
      * 'About' function: show the 'about' box.
      */
     private void showAbout()
@@ -112,6 +121,10 @@ public class Clock
         JButton stepButton = new JButton("Step");
         stepButton.addActionListener(e -> step());
         toolbar.add(stepButton);
+        
+        JButton resetButton = new JButton("Reset");
+        resetButton.addActionListener(e -> reset());
+        toolbar.add(resetButton);
 
         // Add toolbar into panel with flow layout for spacing
         JPanel flow = new JPanel();

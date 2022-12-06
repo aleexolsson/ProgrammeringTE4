@@ -53,6 +53,13 @@ public class ClockDisplay
         }
         updateDisplay();
     }
+    
+    public void timeReset()
+    {
+        minutes.setValue(0);
+        hours.setValue(0);
+        updateDisplay();
+    }
 
     /**
      * Set the time of the display to the specified hour and
