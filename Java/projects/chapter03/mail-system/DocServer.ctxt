@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=DocServer
+comment0.text=\n\ A\ simple\ model\ of\ a\ doc\ server.\ The\ server\ is\ able\ to\ receive\n\ doc\ items\ for\ storage,\ and\ deliver\ them\ to\ clients\ on\ demand.\n\n\ @author\ Alex\ Olsson\n\ @version\ 2022.12.13\n
+comment1.params=
+comment1.target=DocServer()
+comment1.text=\n\ Construct\ a\ doc\ server.\n
+comment2.params=who
+comment2.target=int\ howManyDocItems(java.lang.String)
+comment2.text=\n\ Return\ how\ many\ doc\ items\ are\ waiting\ for\ a\ user.\n\ @param\ who\ The\ user\ to\ check\ for.\n\ @return\ How\ many\ items\ are\ waiting.\n
+comment3.params=who
+comment3.target=DocItem\ getNextDocItem(java.lang.String)
+comment3.text=\n\ Return\ the\ next\ doc\ item\ for\ a\ user\ or\ null\ if\ there\n\ are\ none.\n\ @param\ who\ The\ user\ requesting\ their\ next\ item.\n\ @return\ The\ user's\ next\ item.\n
+comment4.params=item
+comment4.target=void\ post(DocItem)
+comment4.text=\n\ Add\ the\ given\ doc\ item\ to\ the\ message\ list.\n\ @param\ item\ The\ doc\ item\ to\ be\ stored\ on\ the\ server.\n
+numComments=5
