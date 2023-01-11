@@ -46,15 +46,12 @@ public class DocServer
      * @param who The user requesting their next item.
      * @return The user's next item.
      */
-    public DocItem getNextDocItem(String who)
+    public DocItem getNextDocItem()
     {
-        Iterator<DocItem> it = items.iterator();
-        while(it.hasNext()) {
-            DocItem item = it.next();
-            if(item.getTo().equals(who)) {
-                it.remove();
-                return item;
-            }
+        if (items.size() > 0)
+        {
+            DocItem item = items.remove(0);
+            return item;
         }
         return null;
     }

@@ -10,15 +10,15 @@ public class PrinterClient
     // The server used for sending and receiving.
     private DocServer server;
     // The user running this client.
-    private String user;
+    //private String user;
 
     /**
      * Constructor for objects of class PrinterClient
      */
-    public PrinterClient(DocServer server, String user)
+    public PrinterClient(DocServer server)//, String user)
     {
         this.server = server;
-        this.user = user;
+        //this.user = user;
     }
 
     /**
@@ -26,7 +26,7 @@ public class PrinterClient
      */
     public DocItem getNextDocItem()
     {
-        return server.getNextDocItem(user);
+        return server.getNextDocItem();//user);
     }
     
     /**
@@ -35,24 +35,14 @@ public class PrinterClient
      */
     public void printNextDocItem()
     {
-        DocItem item = server.getNextDocItem(user);
+        DocItem item = server.getNextDocItem();
         if(item == null) {
-            System.out.println("No new mail.");
+            System.out.println("No new document");
         }
         else {
             item.print();
         }
     }
     
-    /**
-     * Send the given message to the given recipient via
-     * the attached doc server.
-     * @param to The intended recipient.
-     * @param message The text of the message to be sent.
-     */
-    public void sendDocItem(String to, String message)
-    {
-        DocItem item = new DocItem(user, to, message);
-        server.post(item);
-    }
+    
 }
